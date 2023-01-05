@@ -1,0 +1,4 @@
+int X
+#j'ai pas traiter le cas d'indentation et la compatibilite des types quand idf = une expression multiple
+if(I<11):
+    X=1+2
