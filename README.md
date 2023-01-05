@@ -9,7 +9,7 @@ ts.h //fonctions headers
 
 
 
-$ Description du Langage minipy:
+# Description du Langage minipy:
 
 
 Un programme en minipy est composé d’une suite de déclarations et d’instructions. Chaque 
@@ -18,11 +18,11 @@ Les blocs sont identifiés par l'indentation, (quatre espaces) au lieu d'accolad
 augmentation de l'indentation marque le début d'un bloc, et une réduction de l'indentation marque la 
 fin du bloc courant. 
 
-$Exemple de programme en minipy :
+#Exemple de programme en minipy :
 
 
 #Le programme calcule la somme des x premiers termes d’une suite 
-# arithmétique 
+ #arithmétique 
 int x=50 
 resultat =0 
 while (x!=0) : 
@@ -38,7 +38,7 @@ Exemple de commentaire :
 
 # ceci est un commentaire 
 
-2.$ Déclarations :
+# 2.$ Déclarations :
 
 Une déclaration peut être de variables simples (entiers, réels, caractères, booléen) ou bien de 
 variables structurées (tableaux). 
@@ -114,7 +114,7 @@ comparaison
 + - Gauche 
 * / Gauche 
 
-2.2.6. Les conditions:
+# 2.2.6. Les conditions:
 
 Une condition est une expression qui renvoie ‘1’ ou ‘0’. Elle peut prendre la forme d’une 
 expression de comparaison ou une expression logique. 
@@ -178,14 +178,14 @@ On peut avoir des boucles imbriquées.
 while (i <n) : 
  i=i+2
  
-3. Analyse Lexicale avec l’outil FLEX : 
+ # 3. Analyse Lexicale avec l’outil FLEX : 
 
 Son but est d’associer à chaque mot du programme source la catégorie lexicale à laquelle il 
 appartient. Pour cela, il est demandé de définir les différentes entités lexicales à l’aide d’expressions 
 régulières et de générer le programme FLEX correspondant. 
 
 
-4. Analyse syntaxico-sémantique avec l’outil BISON : 
+# 4. Analyse syntaxico-sémantique avec l’outil BISON : 
 
  Pour implémenter l’analyseur syntaxico-sémantique, il va falloir écrire la grammaire qui génère le 
 langage défini au-dessus. La grammaire associée doit être LALR. En effet l’outil BISON est un 
@@ -193,18 +193,18 @@ analyseur ascendant qui opère sur des grammaires LALR. Il faudra spécifier dan
 différentes règles de la grammaire ainsi que les règles de priorités pour les opérateurs afin de résoudre 
 les conflits. Les routines sémantiques doivent être associées aux règles dans le fichier BISON. 
 
-5. Gestion de la table de symboles : 
+# 5. Gestion de la table de symboles : 
 
 La table de symboles doit regrouper l’ensemble des variables et constantes définies par le 
 programmeur avec toutes les informations nécessaires pour le processus de compilation. Il est 
 demandé de prévoir des procédures pour permettre de rechercher et d’insérer des éléments dans la 
 table des symboles. 
 
-6. Génération du code intermédiaire :
+# 6. Génération du code intermédiaire :
 
 Le code intermédiaire doit être généré sous forme de quadruplets. 
 
-7. Traitement des erreurs : 
+# 7. Traitement des erreurs : 
 
 Il est demandé d’afficher les messages d’erreurs adéquats à chaque étape du processus de 
 compilation. Ainsi, lorsqu’une erreur lexicale ou syntaxique est détectée par votre compilateur, elle 
