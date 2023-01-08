@@ -3,9 +3,6 @@
 #include <string.h>
 #include <stdlib.h>
 #include "ts.h"
-extern char *tab1[1000];
-extern char *tab2[1000];
-extern char *tab3[1000];
 char sauvid[20];
 char sauvid2[20];
 char sauvtyp[20];

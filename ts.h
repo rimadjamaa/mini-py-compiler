@@ -2,12 +2,6 @@
 #define TS_H
 
 #define taille 100
-#define MAXRECST 200
-#define MAXST 100
-#define MAXCHILDREN 100
-#define MAXLEVELS 20
-#define MAXQUADS 1000
-
 typedef struct
 {
    int state;
@@ -36,46 +30,5 @@ void inserervalidf(char entite[],char entite2[]);/*pour insere la val d'un idf a
 int doubledeclaration(char entite[]);/*pour verifier l'utilisation d'un idf sans declaration */
 void modifiecst(char ch[],char typ[]);/*pour inserer le type const aux idfs*/
 int comparetype(char ch[],char ch1[]);/* fortement typé */
-
-//---------------------------------------- test quad ------------------------------------
-typedef struct record
-	{
-		char *type;
-		char *name;
-		int decLineNo;
-		int lastUseLine;
-	} record;
-
-typedef struct ASTNode
-	{
-		int nodeNo;
-    /*Operator*/
-    char *NType;
-    int noOps;
-    struct ASTNode** NextLevel;
-    
-    /*Identifier or Const*/
-    record *id;
-	
-	} node;
-  
-typedef struct Quad
-	{
-		char *R;
-		char *A1;
-		char *A2;
-		char *Op;
-		int I;
-	} Quad;
-
-void makeQ(char *R, char *A1, char *A2, char *Op);
-int checkIfBinOperator(char *Op);
-node *createOp(char *oper, int noOps, ...);
-void printQuads();
-int deadCodeElimination();
- char *makeStr(int no, int flag);
- void Xitoa(int num, char *str);
-
-// -------------------------------------------test quad end-----------------------------
 
 #endif //TS_H
