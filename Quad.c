@@ -3,6 +3,8 @@
 #include <stdlib.h>
 #include "Quad.h"
 int indq=0;
+quadruplet q[t];
+
 void quad (char* o,char*o1,char*o2,char*r)
 {q[indq].opr=o;
  q[indq].op1=o1;

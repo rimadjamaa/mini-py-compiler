@@ -3,6 +3,7 @@
 #include <string.h>
 #include <stdlib.h>
 #include "ts.h"
+#include "Quad.h"
 char sauvid[20];
 char sauvid2[20];
 char sauvtyp[20];
@@ -152,8 +153,9 @@ affectation: /*affectation d'une expression arithmetique a un idf*/
 			|IDF AFFECT PAROU EXP_AR PARFER P 
 			                                 /*verifier la declaration de l'idf*/
                                             {if (doubledeclaration($1)==0){ 
-                                            printf("erreur semantique ligne%d :entite %s : non declarer\n",nb_ligne,$1);}
-												
+                                            printf("erreur semantique ligne%d :entite %s : non declarer\n",nb_ligne,$1);
+											}
+												quad("=","","","$1");
 								            }
 			/*affectation d'un idf a un idf*/
 			|IDF AFFECT IDF                   { /*les 2 idfs non declarer*/
@@ -264,7 +266,7 @@ CP: SUP
         | 
 ;
 /*******************************************************BOUCLE***************************************************/
-BOU:  mc_WHILE PAROU N cond PARFER DEUXP L_INS      {$$ = createOp("While", 2, $3, $6);}
+BOU:  mc_WHILE PAROU N cond PARFER DEUXP L_INS      
 	 |mc_FOR IDF mc_IN IDF  DEUXP L_INS     
 	 |mc_FOR IDF mc_INRANGE PAROU CST_E ver CST_E PARFER DEUXP L_INS 
 ;
@@ -278,6 +280,6 @@ int main()
 {
   yyparse();
   afficher();
-  printQuads();
+  afficherQuad();
   return 0;
 }

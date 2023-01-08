@@ -7,7 +7,7 @@ typedef struct {char*opr;
 				 char* op2;
 				 char* res;}quadruplet;
 				 
-quadruplet q[t];
+
 //fonction d'insertion d'un nouveau quad
 void quad (char*,char*,char*,char*);
 //fonction qui affiche les quads

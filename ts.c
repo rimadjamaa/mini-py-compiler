@@ -6,12 +6,6 @@
 #include<stdbool.h>
 #include <stdarg.h>
 #include "ts.h"
-// test quads
-int sIndex = -1, aIndex = -1, tabCount = 0, tIndex = 0 , lIndex = 0, qIndex = 0, nodeCount = 0;
-node *rootNode;
-char *tString = NULL, *lString = NULL;
-Quad *allQ = NULL;
-// test quads
 
 element tab[1000];
 elt tabs[40],tabm[40];
